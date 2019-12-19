@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export default function Navigator() {
   return (
-    <Navbar bg="primary" variant="dark">
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar bg="secondary" variant="dark">
+      <Navbar.Brand href="#home">ML x React = 🔥</Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="#home">
           <Link to="/">predict my salary</Link>
         </Nav.Link>
         <Nav.Link href="#features">
-          <Link to="/imagesPage">Classify my image</Link>
+          <Link to="/admissionpage">Classify my image</Link>
         </Nav.Link>
       </Nav>
     </Navbar>

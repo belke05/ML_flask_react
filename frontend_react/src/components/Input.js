@@ -14,7 +14,7 @@ export default function Input({
   const handleClick = e => {
     axios
       .get(
-        `http://${window.location.hostname}:7000/send_prediction?experience=${experience}`
+        `http://${window.location.hostname}:7000/predict_salary?experience=${experience}`
       )
       .then(res => {
         console.log(res.data);
