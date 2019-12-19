@@ -5,13 +5,13 @@ import PredictionAdmission from "../components/PredictionAdmission";
 export default function AdmissionPage() {
   const [predictedAdmission, setPredictedAdmission] = useState(false);
   const [admissionData, setAdmissionData] = useState({
-    GRE_Score: null,
-    TOEFL_Score: null,
-    University_Rating: null,
-    SOP: null,
-    LOR: null,
-    CGPA: null,
-    Research: null
+    GRE_Score: 337,
+    TOEFL_Score: 118,
+    University_Rating: 4,
+    SOP: 4.5,
+    LOR: 4.5,
+    CGPA: 9.65,
+    Research: 1
   });
 
   return (
@@ -21,7 +21,9 @@ export default function AdmissionPage() {
         admissionData={admissionData}
         setAdmissionData={setAdmissionData}
       />
-      <PredictionAdmission />
+      {predictedAdmission && (
+        <PredictionAdmission isAdmission={Number(predictedAdmission)} />
+      )}
     </div>
   );
 }

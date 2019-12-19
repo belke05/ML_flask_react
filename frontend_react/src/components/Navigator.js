@@ -11,7 +11,7 @@ export default function Navigator() {
           <Link to="/">predict my salary</Link>
         </Nav.Link>
         <Nav.Link href="#features">
-          <Link to="/admissionpage">Classify my image</Link>
+          <Link to="/admissionpage">Predict my admission</Link>
         </Nav.Link>
       </Nav>
     </Navbar>

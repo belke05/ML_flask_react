@@ -13,6 +13,7 @@ export default function Input({
   };
 
   const handleClick = e => {
+    e.preventDefault();
     axios
       .post(
         `http://${window.location.hostname}:7000/predict_admission`,
@@ -20,7 +21,7 @@ export default function Input({
       )
       .then(res => {
         console.log(res.data);
-        setPredictedAdmission(res.data);
+        setPredictedAdmission(res.data.prediction);
       })
       .catch(err => console.log(err));
   };
@@ -30,22 +31,20 @@ export default function Input({
       {/* <p>{window.token}</p> */}
       <h1>Do I have an admission chance?</h1>
       <form onSubmit={handleClick} className="form">
-        <b>GRE_Score</b>
-        <input
-          type="number"
-          onChange={handleInputChange}
-          placeholder="your score"
-          name="GRE_Score"
-        />
-        <br />
-        <b>GRE_Score</b>
-        <input
-          type="number"
-          onChange={handleInputChange}
-          placeholder="your score"
-          name="GRE_Score"
-        />
-        <br />
+        {Object.keys(admissionData).map((key, i) => {
+          return (
+            <div>
+              <b>{key}</b>
+              <input
+                value={admissionData[key]}
+                type="number"
+                onChange={handleInputChange}
+                placeholder="your value"
+                name={key}
+              />
+            </div>
+          );
+        })}
         <button className="button-predict">
           <b>Predict Admission Chances</b>
         </button>
