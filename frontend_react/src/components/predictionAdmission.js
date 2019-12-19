@@ -2,8 +2,8 @@ import React from "react";
 
 export default function predictionAdmission({ isAdmission }) {
   if (isAdmission) {
-    return <div>You will be admitted 🎓🎓</div>;
+    return <div className="admission_wrapper">You will be admitted 🎓🎓</div>;
   } else {
-    return <div>Probably no admission 😔😔</div>;
+    return <div className="admission_wrapper">Probably no admission 😔😔</div>;
   }
 }

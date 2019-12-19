@@ -1,13 +1,10 @@
-.App {
+body {
   text-align: center;
   background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  height: 100%;
-  color: white;
+  /* font-size: calc(10px + 2vmin); */
+  font-size: 15px;
+  color: #fff;
+  height: 100vh;
 }
 
 .prediction_containter {
@@ -27,8 +24,33 @@
 input,
 button {
   margin: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  border: 1px solid black;
 }
 
 a {
   color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 5%;
+}
+
+.input_wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.admission_wrapper {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 2rem;
 }

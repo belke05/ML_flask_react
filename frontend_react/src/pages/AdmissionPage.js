@@ -11,7 +11,7 @@ export default function AdmissionPage() {
     SOP: 4.5,
     LOR: 4.5,
     CGPA: 9.65,
-    Research: 1
+    Research: 0
   });
 
   return (
