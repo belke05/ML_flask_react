@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
 import "./styles/App.css";
-import Input from "./components/Input";
-import Prediction from "./components/Prediction";
+import SalaryPage from "./pages/SalaryPage";
+import Navigator from "./components/Navigator";
+
+import { Switch, Route } from "react-router-dom";
 
 function App() {
-  const [predictedSalary, setPredictedSalary] = useState(false);
-  const [experience, setExperience] = useState(0);
-
   return (
-    <div className="App">
-      <Input
-        experience={experience}
-        setExperience={setExperience}
-        setPredictedSalary={setPredictedSalary}
-      />
-      {predictedSalary && <Prediction prediction={predictedSalary} />}
+    <div style={{ height: "100vh" }}>
+      <Navigator />
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={SalaryPage} />
+          <Route exact path="/salarypage" component={SalaryPage} />
+        </Switch>
+      </div>
     </div>
   );
 }
